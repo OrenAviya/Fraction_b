@@ -50,31 +50,25 @@ class Fraction{
 
         bool operator>=(const Fraction &frac) const;
         bool operator>=(double number) const ;
-        // friend const bool operator>=(double num , const Fraction frac);
         
         bool operator <=(const Fraction &frac) const;
         bool operator<=(double number) const ;
-        // friend const bool operator<=(double num , const Fraction frac);
 
         bool operator <(const Fraction &frac) const;
         bool operator < (double number) const;
-        // friend const bool operator <(double num , const Fraction frac);
-
+        
         bool operator >(const Fraction &frac) const;
         bool operator>(float number) const;
-        // friend const bool operator >(double number , const Fraction frac);
-
+       
         bool operator==(const Fraction& other) const;
         bool operator == (double number)const;
-        //friend const bool operator ==(double num , const Fraction frac);
-
         
-
         int gcd (int one , int two);
         void reduce();
 
 
 };
+//all the "friend" function but we want them "const" and it is imposible so did it out of class...
 std::ostream& operator<<(std::ostream& out, const Fraction& fraction);   
 std::istream& operator>>(std::istream& input, Fraction& fraction);
  bool operator ==(double num , const Fraction &frac);
